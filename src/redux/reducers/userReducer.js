@@ -34,34 +34,6 @@ export function user(state = fromJS(intialState), action) {
       oldState.userError = action.error;
       oldState.isUserLoading = false;
       return fromJS(oldState);
-    case USERDATA_DELETE_SUCCESS:
-      oldState = state.toJS();
-      oldState.user = {};
-      oldState.isUserLoading = false;
-      return fromJS(oldState);
-    case USERDATA_DELETE_PROGRESS:
-      oldState = state.toJS();
-      oldState.isUserLoading = true;
-      return fromJS(oldState);
-    case USERDATA_DELETE_FAILURE:
-      oldState = state.toJS();
-      oldState.userError = action.data;
-      oldState.isUserLoading = false;
-      return fromJS(oldState);
-    case USERDATA_UPDATE_SUCCESS:
-      oldState = state.toJS();
-      oldState.user = action.data;
-      oldState.isUserLoading = false;
-      return fromJS(oldState);
-    case USERDATA_UPDATE_PROGRESS:
-      oldState = state.toJS();
-      oldState.isUserLoading = true;
-      return fromJS(oldState);
-    case USERDATA_UPDATE_FAILURE:
-      oldState = state.toJS();
-      oldState.userError = action.data;
-      oldState.isUserLoading = false;
-      return fromJS(oldState);
     default:
       return state;
   }
