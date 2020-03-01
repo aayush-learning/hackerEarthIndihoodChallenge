@@ -31,3 +31,6 @@ Thanks !!
 
 I am assuming that react-native set up is already there in the system of the people whho are going to run the project.
 
+
+![](GIF-200301_133227.gif)
+
